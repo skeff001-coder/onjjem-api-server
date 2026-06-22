@@ -28888,7 +28888,7 @@ Return ONLY valid JSON:
 }` }
         ]
       }],
-      config: { maxOutputTokens: 1024, responseMimeType: "application/json" }
+      config: { maxOutputTokens: 8192, responseMimeType: "application/json" }
     });
     const text = response.text ?? "{}";
     const cleaned = text.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
@@ -28926,7 +28926,7 @@ Return ONLY valid JSON:
 }` }
         ]
       }],
-      config: { maxOutputTokens: 1024, responseMimeType: "application/json" }
+      config: { maxOutputTokens: 8192, responseMimeType: "application/json" }
     });
     const text = response.text ?? "{}";
     const cleaned = text.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();

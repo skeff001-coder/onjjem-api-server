@@ -287,7 +287,7 @@ router.post("/health-guide", async (req: Request, res: Response) => {
           { text: `Create a personalised health and care guide for ${name}. Include ONJJEM product recommendations (personalised dog merchandise) naturally within the health tips.\n\nReturn ONLY valid JSON:\n{\n  "healthTips": ["Tip 1", "Tip 2", "Tip 3", "Tip 4"],\n  "productRecommendations": [\n    { "name": "Product name", "description": "Why it helps this breed", "url": "https://onjjem.com" }\n  ],\n  "exercisePlan": "Daily exercise recommendation",\n  "dietNotes": "Diet and nutrition advice",\n  "vetChecklist": ["Check 1", "Check 2", "Check 3"]\n}` },
         ],
       }],
-      config: { maxOutputTokens: 1024, responseMimeType: "application/json" },
+      config: { maxOutputTokens: 8192, responseMimeType: "application/json" },
     });
     const text = response.text ?? "{}";
     const cleaned = text.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
@@ -312,7 +312,7 @@ router.post("/trick-trainer", async (req: Request, res: Response) => {
           { text: `Create a fun, personalised trick training plan for ${name}. Tailor difficulty and tricks to the breed's intelligence and physical ability.\n\nReturn ONLY valid JSON:\n{\n  "difficulty": "Beginner / Intermediate / Advanced",\n  "tricks": [\n    { "name": "Trick name", "steps": 3, "time": "2-3 days" }\n  ],\n  "trainingSchedule": "Daily training routine",\n  "tips": ["Tip 1", "Tip 2", "Tip 3"],\n  "estimatedTime": "Total time to master all tricks"\n}` },
         ],
       }],
-      config: { maxOutputTokens: 1024, responseMimeType: "application/json" },
+      config: { maxOutputTokens: 8192, responseMimeType: "application/json" },
     });
     const text = response.text ?? "{}";
     const cleaned = text.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
