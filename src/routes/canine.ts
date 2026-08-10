@@ -284,7 +284,7 @@ Return ONLY valid JSON:
 }${JSON_SAFETY_NOTE}`,
         },
       ],
-      3072,
+      4096,
       true,
     );
     res.json(result);
