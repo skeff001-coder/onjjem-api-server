@@ -46,7 +46,7 @@ async function generateAndParseJSON<T>(
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
       const response = await ai.models.generateContent({
-        model: "gemini-2.5-flash",
+        model: "gemini-3.8-flash",
         contents: [{ role: "user", parts }],
         config,
       });
